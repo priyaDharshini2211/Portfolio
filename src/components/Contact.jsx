@@ -4,7 +4,7 @@ const contactItems = [
   { icon: 'bi-envelope-fill', label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
   { icon: 'bi-telephone-fill', label: 'Phone', value: profile.phone, href: `tel:${profile.phone}` },
   { icon: 'bi-geo-alt-fill', label: 'Location', value: profile.location, href: null },
-  { icon: 'bi-github', label: 'GitHub', value: 'priyaDharshini2211', href: profile.github, external: true },
+  { icon: 'bi-github', label: 'GitHub', value: profile.githubUsername, href: profile.github, external: true },
   { icon: 'bi-linkedin', label: 'LinkedIn', value: 'View Profile', href: profile.linkedin, external: true },
 ];
 

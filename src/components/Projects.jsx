@@ -11,7 +11,7 @@ function Projects() {
         <div className="row g-4">
           {projects.map((project, index) => (
             <div
-              className="col-lg-6"
+              className="col-md-6 col-lg-4"
               key={project.title}
               data-aos="fade-up"
               data-aos-delay={index * 100}
@@ -19,7 +19,10 @@ function Projects() {
               <div className="card h-100 project-card">
                 <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
                 <div className="card-body d-flex flex-column">
-                  <h3 className="h5 mb-3">{project.title}</h3>
+                  <h3 className="h5 mb-1">{project.title}</h3>
+                  {project.dates && (
+                    <p className="text-body-secondary small fst-italic mb-3">{project.dates}</p>
+                  )}
                   <ul className="mb-3 ps-3 flex-grow-1">
                     {project.bullets.map((bullet, bulletIndex) => (
                       <li key={`${project.title}-${bulletIndex}`} className="mb-2">

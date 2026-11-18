@@ -1,44 +1,45 @@
 export const profile = {
   name: 'Priyadharshini',
-  title: 'Ruby on Rails Developer',
-  roles: ['Ruby on Rails Developer', 'Backend API Engineer', 'RESTful API Specialist'],
+  title: 'Full Stack Developer',
+  roles: ['Full Stack Developer', 'Ruby on Rails Developer', 'React & Django Developer'],
   tagline:
-    'Backend Developer with 2+ years of experience building scalable web applications and secure RESTful APIs.',
-  location: 'Mettupalayam, Tamil Nadu',
+    'Full Stack Developer with 2+ years of experience building scalable web applications and secure RESTful APIs using Ruby on Rails, React, and Django.',
+  location: 'Mettupalayam, Tamil Nadu, India',
   email: 'priyaselvam100@gmail.com',
-  phone: '7418552763',
+  phone: '9751181488',
   resumeFile: './PRIYADHARSHINI (2) (1).pdf',
-  github: 'https://github.com/priyaDharshini2211',
+  github: 'https://github.com/PriyadharshiniS-ammu',
+  githubUsername: 'PriyadharshiniS-ammu',
   linkedin: 'https://www.linkedin.com/in/priyadharshini-selvan-185584241',
   summary:
-    'Backend Developer with 2+ years experience specializing in Ruby on Rails (RoR). Proven expertise in building scalable web applications and developing secure RESTful APIs. Adept at delivering high-performance backend solutions with clean, maintainable code. Recognized for collaborating effectively in Agile teams and ensuring timely delivery.',
+    'Full Stack Developer with 2+ years of experience building scalable web applications and secure RESTful APIs using Ruby on Rails, with hands-on experience developing frontend interfaces using React, JavaScript, and Django. Skilled in database design, API architecture, authentication, and cloud deployment, with a track record of delivering high-performance, maintainable solutions in Agile teams.',
 };
 
 export const skillGroups = [
   {
-    title: 'Languages & Frameworks',
+    title: 'Frontend',
     icon: 'bi-code-slash',
-    skills: ['Ruby', 'Ruby on Rails', 'JavaScript (Basics)', 'HTML', 'CSS', 'CoffeeScript'],
+    skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
+  },
+  {
+    title: 'Backend',
+    icon: 'bi-hdd-stack',
+    skills: ['Ruby', 'Ruby on Rails', 'Python', 'Django'],
   },
   {
     title: 'API Development',
     icon: 'bi-plug',
-    skills: ['RESTful APIs', 'JSON', 'XML', 'API Versioning'],
+    skills: ['RESTful APIs', 'JSON', 'API Versioning'],
+  },
+  {
+    title: 'Databases',
+    icon: 'bi-database',
+    skills: ['PostgreSQL', 'MySQL'],
   },
   {
     title: 'Authentication',
     icon: 'bi-shield-lock',
     skills: ['Devise', 'JWT', 'OAuth'],
-  },
-  {
-    title: 'Database',
-    icon: 'bi-database',
-    skills: ['PostgreSQL', 'MySQL', 'SQLite'],
-  },
-  {
-    title: 'Testing',
-    icon: 'bi-check2-square',
-    skills: ['RSpec', 'Manual Testing'],
   },
   {
     title: 'Background Jobs',
@@ -48,12 +49,12 @@ export const skillGroups = [
   {
     title: 'DevOps & Tools',
     icon: 'bi-cloud-arrow-up',
-    skills: ['Git', 'CI/CD', 'AWS', 'Heroku'],
+    skills: ['Git', 'GitHub', 'CI/CD', 'AWS'],
   },
   {
-    title: 'Methodologies',
-    icon: 'bi-people',
-    skills: ['Agile', 'Scrum'],
+    title: 'Testing & Methodologies',
+    icon: 'bi-check2-square',
+    skills: ['RSpec', 'Manual Testing', 'Agile', 'Scrum'],
   },
 ];
 
@@ -64,34 +65,43 @@ export const experience = [
     dates: '2021 - 2023',
     bullets: [
       'Developed scalable backend services using Ruby on Rails for web and mobile platforms.',
-      'Designed and implemented RESTful APIs with secure authentication.',
-      'Built background processing features using Sidekiq & Redis.',
-      'Deployed and maintained applications on AWS & Heroku with CI/CD workflows.',
-      'Collaborated in Agile teams with daily stand-ups, sprint planning, and peer code reviews.',
+      'Designed and implemented RESTful APIs with secure authentication using Devise, JWT, and OAuth.',
+      'Built background processing features using Sidekiq and Redis for asynchronous job handling.',
+      'Deployed and maintained applications on AWS and Heroku with CI/CD workflows.',
+      'Collaborated in Agile teams through daily stand-ups, sprint planning, and peer code reviews.',
+      'Worked on DALink, building REST APIs and web pages for product listings, user profiles, and payments.',
+      'Worked on Trygg, building APIs for user registration, incident reporting, and live tracking.',
     ],
   },
 ];
 
 export const projects = [
   {
-    title: 'DALink',
-    dates: '',
+    title: 'ShopMart - E-Commerce Platform',
+    dates: 'Personal Project',
     bullets: [
-      'Developed APIs for product listing, user profiles, services provided, affiliate tracking, and payments.',
-      'Developed and maintained the web pages as per client request and authentication.',
-      'Optimized system performance with query tuning & background jobs.',
+      'Built a full-stack e-commerce app with product catalog, cart, checkout, and admin dashboard.',
+      'Implemented user authentication, CSRF protection, and Django ORM-based data models.',
     ],
-    tech: ['Ruby on Rails', 'PostgreSQL', 'JWT', 'AWS'],
+    tech: ['Django', 'Python', 'Bootstrap 5', 'SQLite'],
   },
   {
-    title: 'Trygg',
-    dates: '',
+    title: 'Shopping Cart App',
+    dates: 'Personal Project',
     bullets: [
-      'Built API architecture for user registration, claims, incident, live tracking, chat box, etc.',
-      'Developed web application for tracking incidents, map tracking, panic alert system.',
-      'Achieved error-free deployment and received "Green Card" recognition.',
+      'Built a responsive React frontend with routing for home, product listing, login, and checkout pages.',
+      'Structured reusable UI components using a page-based architecture with React Router DOM.',
     ],
-    tech: ['Ruby on Rails', 'Redis', 'PostgreSQL', 'OAuth', 'Rspec', 'Heroku'],
+    tech: ['React', 'Vite', 'React Router'],
+  },
+  {
+    title: 'e-Learning Website',
+    dates: 'Personal Project',
+    bullets: [
+      'Built a full-stack e-learning platform with a Django backend and a React frontend.',
+      'Implemented course listings, user authentication, and an admin-managed content structure.',
+    ],
+    tech: ['Python', 'Django', 'React'],
   },
 ];
 
@@ -106,4 +116,6 @@ export const education = [
 
 export const certifications = [
   'Cambridge English Certificate - Cambridge Assessment English (Entry 2, Level 2)',
+  'Build & Deploy AI Apps with Google AI Studio: Multilingual AI Speech App Development - GUVI-HCL, 2026',
+  'Python Full Stack Development Course (Certificate of Completion)',
 ];
