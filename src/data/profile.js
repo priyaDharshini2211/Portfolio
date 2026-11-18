@@ -7,7 +7,7 @@ export const profile = {
   location: 'Mettupalayam, Tamil Nadu, India',
   email: 'priyaselvam100@gmail.com',
   phone: '9751181488',
-  resumeFile: './PRIYADHARSHINI (2) (1).pdf',
+  resumeFile: '/Priyadharshini_Resume.pdf',
   github: 'https://github.com/priyaDharshini2211',
   githubUsername: 'priyaDharshini2211',
   linkedin: 'https://www.linkedin.com/in/priyadharshini-selvan-185584241',
