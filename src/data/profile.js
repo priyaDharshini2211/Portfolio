@@ -8,8 +8,8 @@ export const profile = {
   email: 'priyaselvam100@gmail.com',
   phone: '9751181488',
   resumeFile: './PRIYADHARSHINI (2) (1).pdf',
-  github: 'https://github.com/PriyadharshiniS-ammu',
-  githubUsername: 'PriyadharshiniS-ammu',
+  github: 'https://github.com/priyaDharshini2211',
+  githubUsername: 'priyaDharshini2211',
   linkedin: 'https://www.linkedin.com/in/priyadharshini-selvan-185584241',
   summary:
     'Full Stack Developer with 2+ years of experience building scalable web applications and secure RESTful APIs using Ruby on Rails, with hands-on experience developing frontend interfaces using React, JavaScript, and Django. Skilled in database design, API architecture, authentication, and cloud deployment, with a track record of delivering high-performance, maintainable solutions in Agile teams.',
@@ -18,42 +18,34 @@ export const profile = {
 export const skillGroups = [
   {
     title: 'Frontend',
-    icon: 'bi-code-slash',
     skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
   },
   {
     title: 'Backend',
-    icon: 'bi-hdd-stack',
     skills: ['Ruby', 'Ruby on Rails', 'Python', 'Django'],
   },
   {
     title: 'API Development',
-    icon: 'bi-plug',
     skills: ['RESTful APIs', 'JSON', 'API Versioning'],
   },
   {
     title: 'Databases',
-    icon: 'bi-database',
     skills: ['PostgreSQL', 'MySQL'],
   },
   {
     title: 'Authentication',
-    icon: 'bi-shield-lock',
     skills: ['Devise', 'JWT', 'OAuth'],
   },
   {
     title: 'Background Jobs',
-    icon: 'bi-arrow-repeat',
     skills: ['Sidekiq', 'Redis'],
   },
   {
     title: 'DevOps & Tools',
-    icon: 'bi-cloud-arrow-up',
     skills: ['Git', 'GitHub', 'CI/CD', 'AWS'],
   },
   {
     title: 'Testing & Methodologies',
-    icon: 'bi-check2-square',
     skills: ['RSpec', 'Manual Testing', 'Agile', 'Scrum'],
   },
 ];
@@ -117,5 +109,5 @@ export const education = [
 export const certifications = [
   'Cambridge English Certificate - Cambridge Assessment English (Entry 2, Level 2)',
   'Build & Deploy AI Apps with Google AI Studio: Multilingual AI Speech App Development - GUVI-HCL, 2026',
-  'Python Full Stack Development Course (Certificate of Completion)',
+  'Python Full Stack Development Course, Pumo Technovation',
 ];

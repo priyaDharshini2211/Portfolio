@@ -1,45 +1,41 @@
+import { Code2 } from 'lucide-react';
 import { projects } from '../data/profile';
+import { spotlight, useReveal } from '../utils';
 
 function Projects() {
+  const ref = useReveal();
   return (
-    <section id="projects" className="section-padding bg-body-tertiary">
+    <section id="projects" className="section" ref={ref}>
       <div className="container">
-        <div className="section-heading" data-aos="fade-up">
-          <p className="eyebrow">My Work</p>
-          <h2>Featured Projects</h2>
+        <div className="section-head reveal">
+          <span className="eyebrow">Projects</span>
+          <h2>Things I've <span className="grad">made</span></h2>
         </div>
-        <div className="row g-4">
-          {projects.map((project, index) => (
-            <div
-              className="col-md-6 col-lg-4"
+        <div className="project-grid">
+          {projects.map((project, i) => (
+            <article
               key={project.title}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
+              className="card spot project reveal"
+              style={{ '--d': `${i * 90}ms` }}
+              onMouseMove={spotlight}
             >
-              <div className="card h-100 project-card">
-                <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
-                <div className="card-body d-flex flex-column">
-                  <h3 className="h5 mb-1">{project.title}</h3>
-                  {project.dates && (
-                    <p className="text-body-secondary small fst-italic mb-3">{project.dates}</p>
-                  )}
-                  <ul className="mb-3 ps-3 flex-grow-1">
-                    {project.bullets.map((bullet, bulletIndex) => (
-                      <li key={`${project.title}-${bulletIndex}`} className="mb-2">
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="d-flex flex-wrap gap-2 mt-auto pt-3 border-top">
-                    {project.tech.map((tech) => (
-                      <span key={tech} className="badge skill-badge">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              <div className="project-top">
+                <span className="icon-tile"><Code2 size={22} /></span>
+                <span className="project-no">{String(i + 1).padStart(2, '0')}</span>
               </div>
-            </div>
+              <h3>{project.title}</h3>
+              {project.dates && <p className="kind">{project.dates}</p>}
+              <ul className="dots">
+                {project.bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+              <div className="tags">
+                {project.tech.map((t) => (
+                  <span className="tag" key={t}>{t}</span>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
       </div>

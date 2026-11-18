@@ -1,60 +1,44 @@
+import { ArrowUpRight, Copy, MapPin, Phone } from 'lucide-react';
+import { Github, Linkedin } from './BrandIcons';
 import { profile } from '../data/profile';
-
-const contactItems = [
-  { icon: 'bi-envelope-fill', label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  { icon: 'bi-telephone-fill', label: 'Phone', value: profile.phone, href: `tel:${profile.phone}` },
-  { icon: 'bi-geo-alt-fill', label: 'Location', value: profile.location, href: null },
-  { icon: 'bi-github', label: 'GitHub', value: profile.githubUsername, href: profile.github, external: true },
-  { icon: 'bi-linkedin', label: 'LinkedIn', value: 'View Profile', href: profile.linkedin, external: true },
-];
+import { spotlight, useCopyEmail, useReveal } from '../utils';
 
 function Contact() {
+  const ref = useReveal();
+  const copyEmail = useCopyEmail(profile.email);
+
   return (
-    <section id="contact" className="section-padding bg-body-tertiary">
+    <section id="contact" className="section" ref={ref}>
       <div className="container">
-        <div className="cta-banner" data-aos="zoom-in">
-          <div className="cta-banner-content">
-            <div>
-              <p className="eyebrow text-white-50">Get In Touch</p>
-              <h2 className="text-white mb-2">Let's Work Together</h2>
-              <p className="text-white-50 mb-0 col-lg-8">
-                I'm currently open to new opportunities. Feel free to reach out for
-                collaborations or just a friendly hello.
-              </p>
-            </div>
-            <a href={`mailto:${profile.email}`} className="btn btn-light btn-lg px-4 flex-shrink-0">
-              <i className="bi bi-send-fill me-2"></i>Say Hello
-            </a>
-          </div>
+        <div className="cta reveal">
+          <span className="eyebrow">Contact</span>
+          <h2>Let's build something <span className="grad">great together</span></h2>
+          <p>I'm open to full stack and backend opportunities. Click the button to copy my email.</p>
+          <button type="button" className="btn btn-primary btn-lg" onClick={copyEmail}>
+            <Copy size={20} /> {profile.email}
+          </button>
         </div>
-        <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
-          {contactItems.map((item, index) => (
-            <div
-              key={item.label}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <div className="card contact-card h-100 text-center">
-                <div className="card-body">
-                  <div className="contact-icon">
-                    <i className={`bi ${item.icon}`}></i>
-                  </div>
-                  <h3 className="h6 mb-1">{item.label}</h3>
-                  {item.href ? (
-                    <a
-                      href={item.href}
-                      className="text-decoration-none"
-                      {...(item.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-                    >
-                      {item.value}
-                    </a>
-                  ) : (
-                    <p className="mb-0">{item.value}</p>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
+
+        <div className="contact-grid">
+          <a className="card spot contact-card reveal" href={`tel:${profile.phone}`} onMouseMove={spotlight}>
+            <span className="icon-tile"><Phone size={20} /></span>
+            <div><small>Phone</small><strong>{profile.phone}</strong></div>
+            <ArrowUpRight size={18} className="go" />
+          </a>
+          <div className="card spot contact-card reveal" style={{ '--d': '70ms' }} onMouseMove={spotlight}>
+            <span className="icon-tile"><MapPin size={20} /></span>
+            <div><small>Location</small><strong>{profile.location}</strong></div>
+          </div>
+          <a className="card spot contact-card reveal" style={{ '--d': '140ms' }} href={profile.github} target="_blank" rel="noreferrer" onMouseMove={spotlight}>
+            <span className="icon-tile"><Github size={20} /></span>
+            <div><small>GitHub</small><strong>{profile.githubUsername}</strong></div>
+            <ArrowUpRight size={18} className="go" />
+          </a>
+          <a className="card spot contact-card reveal" style={{ '--d': '210ms' }} href={profile.linkedin} target="_blank" rel="noreferrer" onMouseMove={spotlight}>
+            <span className="icon-tile"><Linkedin size={20} /></span>
+            <div><small>LinkedIn</small><strong>View profile</strong></div>
+            <ArrowUpRight size={18} className="go" />
+          </a>
         </div>
       </div>
     </section>

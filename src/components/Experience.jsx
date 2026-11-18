@@ -1,43 +1,33 @@
+import { Building2, CalendarDays, CheckCircle2 } from 'lucide-react';
 import { experience } from '../data/profile';
+import { useReveal } from '../utils';
 
 function Experience() {
+  const ref = useReveal();
   return (
-    <section id="experience" className="section-padding">
+    <section id="experience" className="section" ref={ref}>
       <div className="container">
-        <div className="section-heading" data-aos="fade-up">
-          <p className="eyebrow">My Journey</p>
-          <h2>Professional Experience</h2>
+        <div className="section-head reveal">
+          <span className="eyebrow">Experience</span>
+          <h2>Where I've <span className="grad">worked</span></h2>
         </div>
         <div className="timeline">
-          {experience.map((item, index) => (
-            <div
-              className="timeline-item"
-              key={item.company}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <div className="timeline-marker">
-                <i className="bi bi-briefcase-fill"></i>
-              </div>
-              <div className="card timeline-card">
-                <div className="card-body">
-                  <div className="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
-                    <div>
-                      <h3 className="h5 mb-1">{item.role}</h3>
-                      <p className="text-gradient fw-semibold mb-0">{item.company}</p>
-                    </div>
-                    <span className="badge date-badge">{item.dates}</span>
-                  </div>
-                  <ul className="mb-0 ps-3">
-                    {item.bullets.map((bullet, bulletIndex) => (
-                      <li key={`${item.company}-${bulletIndex}`} className="mb-2">
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
+          {experience.map((job) => (
+            <article className="card timeline-item reveal" key={job.company}>
+              <span className="timeline-dot" />
+              <div className="job-head">
+                <div>
+                  <h3>{job.role}</h3>
+                  <p className="company"><Building2 size={16} /> {job.company}</p>
                 </div>
+                <span className="date"><CalendarDays size={15} /> {job.dates}</span>
               </div>
-            </div>
+              <ul className="checks">
+                {job.bullets.map((b) => (
+                  <li key={b}><CheckCircle2 size={17} /><span>{b}</span></li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </div>
