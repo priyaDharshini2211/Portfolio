@@ -109,6 +109,20 @@ export const education = [
 ];
 
 export const certifications = [
-  'Python Full Stack Development Course, Pumo Technovation (Mar 2026 - Oct 2026)',
-  'Build & Deploy AI Apps with Google AI Studio: Multilingual AI Speech App Development, GUVI-HCL, 2026',
+  {
+    title: 'Python Full Stack Development Course',
+    issuer: 'Pumo Technovation',
+    date: 'Mar 2026 - Oct 2026',
+  },
+  {
+    title: 'Build & Deploy AI Apps with Google AI Studio: Multilingual AI Speech App Development',
+    issuer: 'GUVI-HCL',
+    date: '2026',
+  },
+  {
+    title: 'AI Fluency: Framework & Foundations',
+    issuer: 'Anthropic',
+    date: 'Certificate of Completion',
+    file: '/certificates/Anthropic-AI-Fluency-Framework-and-Foundations.pdf',
+  },
 ];

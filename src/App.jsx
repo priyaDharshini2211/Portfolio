@@ -9,10 +9,11 @@ const Skills = lazy(() => import('./components/Skills'));
 const Experience = lazy(() => import('./components/Experience'));
 const Projects = lazy(() => import('./components/Projects'));
 const Education = lazy(() => import('./components/Education'));
+const Certificates = lazy(() => import('./components/Certificates'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
-const SECTION_IDS = ['top', 'about', 'skills', 'experience', 'projects', 'education', 'contact'];
+const SECTION_IDS = ['top', 'about', 'skills', 'experience', 'projects', 'education', 'certificates', 'contact'];
 
 function App() {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'dark');
@@ -65,6 +66,7 @@ function App() {
           <Experience />
           <Projects />
           <Education />
+          <Certificates />
           <Contact />
         </Suspense>
       </main>
