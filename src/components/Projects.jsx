@@ -1,5 +1,6 @@
-import { Code2 } from 'lucide-react';
-import { projects } from '../data/profile';
+import { ArrowUpRight, Code2 } from 'lucide-react';
+import { projects, profile } from '../data/profile';
+import { Github } from './BrandIcons';
 import { spotlight, useReveal } from '../utils';
 
 function Projects() {
@@ -37,6 +38,11 @@ function Projects() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="more-row reveal">
+          <a href={profile.github} target="_blank" rel="noreferrer" className="btn btn-ghost">
+            <Github size={18} /> See all my code on GitHub <ArrowUpRight size={16} />
+          </a>
         </div>
       </div>
     </section>

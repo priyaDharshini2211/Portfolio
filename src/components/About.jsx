@@ -4,14 +4,14 @@ import { useReveal } from '../utils';
 
 const stats = [
   { value: '2+', label: 'Years experience', Icon: Briefcase },
-  { value: String(projects.length), label: 'Personal projects', Icon: FolderGit2 },
+  { value: String(projects.length), label: 'Projects built', Icon: FolderGit2 },
   { value: String(certifications.length), label: 'Certifications', Icon: Award },
 ];
 
 const lines = [
   ['const', ' priya', ' =', ' {'],
-  ['  role:', ' "Full Stack Developer"', ','],
-  ['  backend:', ' ["Rails", "Django"]', ','],
+  ['  role:', ' "Python Full Stack Developer"', ','],
+  ['  backend:', ' ["Django", "Rails"]', ','],
   ['  frontend:', ' ["React", "JavaScript"]', ','],
   ['  loves:', ' ["clean APIs", "fast apps"]', ','],
   ['};'],

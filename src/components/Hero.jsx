@@ -78,6 +78,9 @@ function Hero() {
             <a href={profile.resumeFile} target="_blank" rel="noreferrer" className="btn btn-ghost">
               <Download size={18} /> Resume
             </a>
+            <a href={profile.github} target="_blank" rel="noreferrer" className="btn btn-ghost">
+              <Github size={18} /> GitHub
+            </a>
             <button type="button" className="btn btn-ghost" onClick={copyEmail}>
               <Copy size={18} /> Copy email
             </button>
@@ -109,7 +112,7 @@ function Hero() {
               </div>
             </div>
             <div className="id-lines">
-              <p><b>stack</b><span>Rails · React · Django</span></p>
+              <p><b>stack</b><span>Python · Django · React</span></p>
               <p><b>exp</b><span>2+ years</span></p>
               <p><b>focus</b><span>APIs · Performance</span></p>
               <p><b>status</b><span className="ok">● available</span></p>

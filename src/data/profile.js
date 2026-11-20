@@ -1,9 +1,9 @@
 export const profile = {
   name: 'Priyadharshini',
-  title: 'Full Stack Developer',
-  roles: ['Full Stack Developer', 'Ruby on Rails Developer', 'React & Django Developer'],
+  title: 'Python Full Stack Developer',
+  roles: ['Python Full Stack Developer', 'Django & React Developer', 'Ruby on Rails Developer'],
   tagline:
-    'Full Stack Developer with 2+ years of experience building scalable web applications and secure RESTful APIs using Ruby on Rails, React, and Django.',
+    'Full Stack Developer with 2+ years of experience building web applications and secure RESTful APIs using Python (Django), React, and Ruby on Rails.',
   location: 'Mettupalayam, Tamil Nadu, India',
   email: 'priyaselvam100@gmail.com',
   phone: '9751181488',
@@ -12,48 +12,32 @@ export const profile = {
   githubUsername: 'priyaDharshini2211',
   linkedin: 'https://www.linkedin.com/in/priyadharshini-selvan-185584241',
   summary:
-    'Full Stack Developer with 2+ years of experience building scalable web applications and secure RESTful APIs using Ruby on Rails, with hands-on experience developing frontend interfaces using React, JavaScript, and Django. Skilled in database design, API architecture, authentication, and cloud deployment, with a track record of delivering high-performance, maintainable solutions in Agile teams.',
+    'Full Stack Developer with 2+ years of experience building web applications and secure RESTful APIs using Python (Django), React, and Ruby on Rails. Skilled in database design, API architecture, JWT/OAuth authentication, background job processing, and AWS deployment in Agile teams. Returned from a career break and completed a Python Full Stack Development course (Mar to Oct 2026), with hands-on projects in Django, React, and Generative AI app development.',
 };
 
 export const skillGroups = [
-  {
-    title: 'Frontend',
-    skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
-  },
-  {
-    title: 'Backend',
-    skills: ['Ruby', 'Ruby on Rails', 'Python', 'Django'],
-  },
+  { title: 'Languages', skills: ['Python', 'JavaScript', 'Ruby', 'SQL'] },
+  { title: 'Backend', skills: ['Python', 'Django', 'Ruby on Rails'] },
+  { title: 'Frontend', skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'] },
   {
     title: 'API Development',
-    skills: ['RESTful APIs', 'JSON', 'API Versioning'],
+    skills: ['RESTful APIs', 'JSON', 'API Versioning', 'JWT', 'OAuth', 'Devise', 'CSRF protection'],
   },
-  {
-    title: 'Databases',
-    skills: ['PostgreSQL', 'MySQL'],
-  },
-  {
-    title: 'Authentication',
-    skills: ['Devise', 'JWT', 'OAuth'],
-  },
-  {
-    title: 'Background Jobs',
-    skills: ['Sidekiq', 'Redis'],
-  },
+  { title: 'Databases', skills: ['PostgreSQL', 'MySQL'] },
   {
     title: 'DevOps & Tools',
-    skills: ['Git', 'GitHub', 'CI/CD', 'AWS'],
+    skills: ['Git', 'GitHub', 'CI/CD', 'AWS', 'Heroku', 'Sidekiq', 'Redis'],
   },
   {
-    title: 'Testing & Methodologies',
-    skills: ['RSpec', 'Manual Testing', 'Agile', 'Scrum'],
+    title: 'Testing, AI & Methodologies',
+    skills: ['RSpec', 'Agile', 'Scrum', 'Google AI Studio'],
   },
 ];
 
 export const experience = [
   {
     company: 'Mallow Technologies Private Ltd',
-    role: 'ROR Developer',
+    role: 'Ruby on Rails Developer',
     dates: '2021 - 2023',
     bullets: [
       'Developed scalable backend services using Ruby on Rails for web and mobile platforms.',
@@ -63,6 +47,16 @@ export const experience = [
       'Collaborated in Agile teams through daily stand-ups, sprint planning, and peer code reviews.',
       'Worked on DALink, building REST APIs and web pages for product listings, user profiles, and payments.',
       'Worked on Trygg, building APIs for user registration, incident reporting, and live tracking.',
+    ],
+  },
+  {
+    company: 'Pumo Technovation · GUVI-HCL',
+    role: 'Career Break (Maternity) & Upskilling',
+    dates: '2023 - 2026',
+    kind: 'learning',
+    bullets: [
+      'Completed a Python Full Stack Development course at Pumo Technovation (Mar 2026 - Oct 2026) and built the projects listed below.',
+      'Completed "Build & Deploy AI Apps with Google AI Studio" (GUVI-HCL, 2026).',
     ],
   },
 ];
@@ -78,6 +72,15 @@ export const projects = [
     tech: ['Django', 'Python', 'Bootstrap 5', 'SQLite'],
   },
   {
+    title: 'e-Learning Website',
+    dates: 'Personal Project',
+    bullets: [
+      'Built a full-stack e-learning platform with a Django backend and a React frontend.',
+      'Implemented course listings, user authentication, and an admin-managed content structure.',
+    ],
+    tech: ['Python', 'Django', 'React'],
+  },
+  {
     title: 'Shopping Cart App',
     dates: 'Personal Project',
     bullets: [
@@ -87,13 +90,12 @@ export const projects = [
     tech: ['React', 'Vite', 'React Router'],
   },
   {
-    title: 'e-Learning Website',
-    dates: 'Personal Project',
+    title: 'Multilingual AI Speech App',
+    dates: 'GUVI-HCL Google AI Studio course',
     bullets: [
-      'Built a full-stack e-learning platform with a Django backend and a React frontend.',
-      'Implemented course listings, user authentication, and an admin-managed content structure.',
+      'Built a multilingual AI speech application as part of the GUVI-HCL Google AI Studio course.',
     ],
-    tech: ['Python', 'Django', 'React'],
+    tech: ['Google AI Studio', 'Python'],
   },
 ];
 
@@ -107,7 +109,6 @@ export const education = [
 ];
 
 export const certifications = [
-  'Cambridge English Certificate - Cambridge Assessment English (Entry 2, Level 2)',
-  'Build & Deploy AI Apps with Google AI Studio: Multilingual AI Speech App Development - GUVI-HCL, 2026',
-  'Python Full Stack Development Course, Pumo Technovation',
+  'Python Full Stack Development Course, Pumo Technovation (Mar 2026 - Oct 2026)',
+  'Build & Deploy AI Apps with Google AI Studio: Multilingual AI Speech App Development, GUVI-HCL, 2026',
 ];
