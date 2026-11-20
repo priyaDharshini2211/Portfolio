@@ -117,7 +117,8 @@ export const certifications = [
   {
     title: 'Build & Deploy AI Apps with Google AI Studio: Multilingual AI Speech App Development',
     issuer: 'GUVI-HCL',
-    date: '2026',
+    date: 'Issued Aug 13, 2026',
+    file: '/certificates/GUVI-HCL-Google-AI-Studio-Multilingual-AI-Speech-App.pdf',
   },
   {
     title: 'AI Fluency: Framework & Foundations',
